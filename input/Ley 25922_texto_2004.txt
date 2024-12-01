@@ -1,0 +1,200 @@
+LEY DE PROMOCION DE LA INDUSTRIA DEL SOFTWARE Ley 25
+
+Ir a texto actualizado y otros datos
+
+LEY DE PROMOCION DE LA INDUSTRIA DEL SOFTWARE
+
+Ley 25.922
+
+Definición, ámbito de aplicación y alcances. Tratamiento fiscal para el sector. Importaciones. Fondo Fiduciario de Promoción de la Industria del Software (FONSOFT). Infracciones y sanciones. Disposiciones generales.
+
+Sancionada: Agosto 18 de 2004
+
+Promulgada Parcialmente: Septiembre 7 de 2004
+
+El Senado y Cámara de Diputados de la Nación Argentina reunidos en Congreso, etc. sancionan con fuerza de Ley:
+
+LEY DE PROMOCION DE LA INDUSTRIA DEL SOFTWARE
+
+CAPITULO I
+
+Definición, ámbito de aplicación y alcances
+
+ARTICULO 1°
+
+ Créase un Régimen de Promoción de la Industria del Software que regirá en todo el territorio de la República Argentina con los alcances y limitaciones establecidas en la presente ley y las normas reglamentarias que en su consecuencia dicte el Poder Ejecutivo nacional. El presente régimen estará enmarcado en las políticas estratégicas que a tal efecto establezca el Poder Ejecutivo nacional a través de sus organismos competentes y tendrá vigencia durante el plazo de diez años a partir de su aprobación.
+
+ARTICULO 2°
+
+ Podrán acogerse al presente régimen de promoción las personas físicas y jurídicas constituidas en la República Argentina cuya actividad principal sea la industria del software, que se encuentren habilitadas para actuar dentro de su territorio con ajuste a sus leyes, debidamente inscritas conforme a las mismas y desarrollen en el país y por cuenta propia las actividades definidas en el artículo 4°.
+
+ARTICULO 3°
+
+ Los interesados en acogerse al presente régimen deberán inscribirse en el registro habilitado por la autoridad de aplicación.
+
+Facúltase a la autoridad de aplicación a celebrar los respectivos convenios con las provincias que adhieran al presente régimen, con el objeto de facilitar y garantizar la inscripción de los interesados de cada jurisdicción provincial en el registro habilitado en el párrafo anterior.
+
+ARTICULO 4°
+
+ Las actividades comprendidas en el régimen establecido por la ley son la creación, diseño, desarrollo, producción e implementación y puesta a punto de los sistemas de software desarrollados y su documentación técnica asociada, tanto en su aspecto básico como aplicativo, incluyendo el que se elabore para ser incorporado a procesadores utilizados en bienes de diversa índole, tales como consolas, centrales telefónicas, telefonía celular, máquinas y otros dispositivos. Queda excluida del régimen establecido en la presente ley la actividad de autodesarrollo de software.
+
+ARTICULO 5°
+
+ A los fines de la presente ley, se define el software como la expresión organizada de un conjunto de órdenes o instrucciones en cualquier lenguaje de alto nivel, de nivel intermedio, de ensamblaje o de máquina, organizadas en estructuras de diversas secuencias y combinaciones, almacenadas en medio magnético, óptico, eléctrico, discos, chips, circuitos o cualquier otro que resulte apropiado o que se desarrolle en el futuro, previsto para que una computadora o cualquier máquina con capacidad de procesamiento de información ejecute una función específica, disponiendo o no de datos, directa o indirectamente.
+
+CAPITULO II
+
+Tratamiento fiscal para el sector
+
+ARTICULO 6°
+
+ A los sujetos que desarrollen las actividades comprendidas en el presente régimen de acuerdo a las disposiciones del capítulo I les será aplicable el régimen tributario general con las modificaciones que se establecen en el presente capítulo. Los beneficiarios que adhieran al presente régimen deberán estar en curso normal de cumplimiento de sus obligaciones impositivas y previsionales.
+
+ARTICULO 7°
+
+ Los sujetos que adhieran a este régimen gozarán de estabilidad fiscal por el término de diez (10) años contados a partir del momento de la entrada en vigencia de la presente ley. La estabilidad fiscal alcanza a todos los tributos nacionales, entendiéndose por tales los impuestos directos, tasas y contribuciones impositivas que tengan como sujetos pasivos a los beneficiarios inscriptos. La estabilidad fiscal significa que los sujetos que desarrollen actividades de producción de software no podrán ver incrementada su carga tributaria total nacional al momento de la incorporación de la empresa al presente marco normativo general.
+
+ARTICULO 8°
+
+ Los beneficiarios del régimen de la presente ley que desempeñen actividades de investigación y desarrollo en software y/o procesos de certificación de calidad de software desarrollado en el territorio nacional y/o exportaciones de software (asegurando a los trabajadores de la actividad la legislación laboral vigente), podrán convertir en un bono de crédito fiscal intransferible hasta el 70% (setenta por ciento) de las contribuciones patronales que hayan efectivamente pagado sobre la nómina salarial total de la empresa con destino a los sistemas y subsistemas de seguridad social previstos en las leyes 19.032 (INSSJyP), 24.013 (Fondo Nacional de Empleo) y 24.241 (Sistema Integrado de Jubilaciones y Pensiones). Los beneficiarios podrán utilizar dichos bonos para la cancelación de tributos nacionales que tengan origen en la industria del software, en particular el impuesto al valor agregado (IVA) u otros impuestos nacionales y sus anticipos, en caso de proceder, excluido el impuesto a las ganancias. El bono no podrá utilizarse para cancelar deudas anteriores a la efectiva incorporación del beneficiario al régimen de la presente ley y, en ningún caso, eventuales saldos a su favor harán lugar a reintegros o devoluciones por parte del Estado.
+
+ARTICULO 9°
+
+ Los sujetos adheridos al régimen de promoción establecido por la presente ley tendrán una desgravación del sesenta por ciento (60%) en el monto total del impuesto a las ganancias determinado en cada ejercicio. Este beneficio alcanzará a quienes acrediten gastos de investigación y desarrollo y/o procesos de certificación de calidad y/o exportaciones de software, en las magnitudes que determine la autoridad de aplicación.
+
+ARTICULO 10.
+
+ A los efectos de la percepción de los beneficios establecidos en los artículos precedentes, los sujetos que adhieran al presente régimen deberán cumplir con alguna norma de calidad reconocida aplicable a los productos de software. Esta exigencia comenzará a regir a partir del tercer año de vigencia del presente marco promocional.
+
+ARTICULO 11
+
+.  Los sujetos que adhieran a los beneficios establecidos en la presente ley, que además de la industria del software como actividad principal desarrollen otras de distinta naturaleza, llevarán su contabilidad de manera tal que permita la determinación y evaluación en forma separada de la actividad promovida del resto de las desarrolladas. La imputación de gastos compartidos con actividades ajenas a las promovidas se atribuirán contablemente respetando criterios objetivos de reparto, como cantidad de personal empleado, monto de salarios pagados, espacio físico asignado u otros, siendo esta enumeración meramente enunciativa y no limitativa. Serán declarados y presentados anualmente a la autoridad de aplicación en la forma y tiempo que ésta establezca los porcentuales de apropiación de gastos entre las actividades distintas y su justificativo.
+
+CAPITULO III
+
+Importaciones
+
+ARTICULO 12.
+
+ Las importaciones de productos informáticos que realicen los sujetos que adhieran al presente régimen de promoción quedan excluidas de cualquier tipo de restricción presente o futura para el giro de divisas que se correspondan al pago de importaciones de hardware y demás componentes de uso informático que sean necesarios para las actividades de producción de software.
+
+CAPITULO IV
+
+Fondo Fiduciario de Promoción de la Industria del Software (Fonsoft)
+
+ARTICULO 13.
+
+ Créase el Fondo Fiduciario de Promoción de la Industria del Software (Fonsoft), el cual será integrado por:
+
+1. Los recursos que anualmente se asignen a través de la ley de presupuesto.
+
+2. Los ingresos por las penalidades previstas ante el incumplimiento de la presente ley.
+
+3. Ingresos por legados o donaciones.
+
+4. Fondos provistos por organismos internacionales u organizaciones no gubernamentales.
+
+ARTICULO 14.
+
+ Facúltase al Jefe de Gabinete de Ministros a efectuar las modificaciones presupuestarias que correspondan, previendo para el primer año un monto de pesos dos millones ($ 2.000.000) a fin de poder cumplir con lo previsto en el inciso 1 del artículo 13.
+
+ARTICULO 15.
+
+ La Secretaría de Ciencia, Tecnología e Innovación Productiva, a través de la Agencia Nacional de Promoción Científica y Tecnológica, será la autoridad de aplicación en lo referido al Fonsoft y actuará como fiduciante frente al administrador fiduciario.
+
+ARTICULO 16.
+
+ La autoridad de aplicación definirá los criterios de distribución de los fondos acreditados en el Fonsoft los que serán asignados prioritariamente a universidades, centros de investigación, pymes y nuevos emprendimientos que se dediquen a la actividad de desarrollo de software.
+
+A los efectos mencionados en el párrafo anterior la autoridad de aplicación convendrá con las provincias que adhieran al régimen de la presente ley, la forma y modo en que éstas, a través de sus organismos pertinentes, se verán representadas en la Agencia Nacional de Promoción Científica y Tecnológica.
+
+ARTICULO 17.
+
+ La autoridad de aplicación podrá financiar a través del Fonsoft:
+
+1. Proyectos de investigación y desarrollo relacionados a las actividades definidas en el artículo 4° de la presente.
+
+2. Programas de nivel terciario o superior para la capacitación de recursos humanos.
+
+3. Programas para la mejora en la calidad de los procesos de creación, diseño, desarrollo y producción de software.
+
+4. Programas de asistencia para la constitución de nuevos emprendimientos.
+
+ARTICULO 18.
+
+ La autoridad de aplicación otorgará preferencia en la asignación de financiamientos a través del Fonsoft, según lo definido en el artículo 16, a quienes:
+
+a) Se encuentren radicados en regiones del país con menor desarrollo relativo
+
+b) Registren en la República Argentina los derechos de reproducción de software según las normas vigentes;
+
+c) Generen mediante los programas promocionados un aumento cierto y fehaciente en la utilización de recursos humanos;
+
+d) Generen mediante los programas promocionados incrementales de exportación;
+
+e) Adhieran al presente régimen de promoción.
+
+ARTICULO 19.
+
+ Las erogaciones de la autoridad de aplicación relacionadas a la administración del Fonsoft no deberán superar el cinco por ciento (5%) de la recaudación anual del mismo.
+
+CAPITULO V
+
+Infracciones y sanciones
+
+ARTICULO 20.
+
+ El incumplimiento de las normas de la presente ley y de las disposiciones de la autoridad de aplicación referidas a los beneficios establecidos en el capítulo II por parte de las personas físicas y jurídicas que se acojan al régimen de promoción de la presente ley, determinará la aplicación por parte de la autoridad de aplicación de las sanciones que se detallan a continuación:
+
+1. Revocación de la inscripción en el registro establecido en el artículo 3° y de los beneficios otorgados por el capítulo II.
+
+2. Pago de los tributos no ingresados con motivo de lo dispuesto en el capítulo II, con más los intereses, en relación con el incumplimiento específico determinado.
+
+3. Inhabilitación para inscribirse nuevamente en el registro establecido en el artículo 3°.
+
+CAPITULO VI
+
+Disposiciones generales
+
+ARTICULO 21.
+
+ La autoridad de aplicación de la presente ley será la Secretaría de Industria, Comercio y de la Pequeña y Mediana Empresa dependiente del Ministerio de Economía y Producción, con excepción de lo establecido en el capítulo IV y sin perjuicio de lo establecido por el artículo 6° del decreto 252/2000, según texto ordenado por el decreto 243/2001.
+
+ARTICULO 22.
+
+ La Secretaría de Industria, Comercio y de la Pequeña y Mediana Empresa deberá publicar en su respectiva página de Internet el registro de los beneficiarios del presente régimen, así como los montos de beneficio fiscal otorgados a los mismos.
+
+ARTICULO 23.
+
+ A los fines de la presente ley quedan excluidas como actividades de investigación y desarrollo de software la solución de problemas técnicos que se hayan superado en proyectos anteriores sobre los mismos sistemas operativos y arquitecturas informáticas. También el mantenimiento, la conversión y/o traducción de lenguajes informáticos, la adición de funciones y/ o preparación de documentación para el usuario, garantía o asesoramiento de calidad de los sistemas no repetibles existentes. Quedan también excluidas las actividades de recolección rutinarias de datos, la elaboración de estudios de mercado para la comercialización de software y aquellas otras actividades ligadas a la producción de software que no conlleven un progreso funcional o tecnológico en el área del software.
+
+ARTICULO 24.
+
+ La autoridad de aplicación realizará auditorías y evaluaciones del presente régimen, debiendo informar anualmente al Congreso de la Nación los resultados de las mismas. Dicha información deberá realizarse a partir del tercer año de vigencia de la ley.
+
+ARTICULO 25.
+
+Los beneficios fiscales contemplados en la presente ley, mientras subsista el sistema de coparticipación federal de impuestos vigente, se detraerán de las cuantías de los recursos que correspondan a la Nación.
+
+ARTICULO 26.
+
+ El cupo fiscal de los beneficios a otorgarse por el presente régimen promocional será fijado anualmente en la ley de Presupuesto general de gastos y cálculo de recursos de la Administración nacional.
+
+A partir de la vigencia de la presente ley y durante los tres primeros ejercicios fiscales posteriores, el cupo correspondiente se otorgará en función de la demanda y desarrollo de las actividades promocionadas.
+
+ARTICULO 27.
+
+ Invítase a las provincias, a la Ciudad Autónoma de Buenos Aires y a los municipios a adherir al presente régimen mediante el dictado de normas de promoción análogas a las establecidas en la presente ley.
+
+ARTICULO 28.
+
+ Comuníquese al Poder Ejecutivo.
+
+DADA EN LA SALA DE SESIONES DEL CONGRESO ARGENTINO, EN BUENOS AIRES, A LOS DIECIOCHO DIAS DEL MES DE AGOSTO DEL AÑO DOS MIL CUATRO.
+
+ REGISTRADA BAJO EL N° 25.922 
+
+EDUARDO O. CAMAÑO.  MARCELO A. GUINLE.  Eduardo D. Rollano.  Juan Estrada.
+
+NOTA: El texto en negrita fue observado.
+
