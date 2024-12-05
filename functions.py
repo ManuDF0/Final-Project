@@ -85,12 +85,71 @@ def tfidf(data, interval = None):
 def get_decade(year):
     return (year // 10) * 10
 
-def count_words_per_decade(data):
-    decade_counts = {}
+def random_tfidf(data, seed, bootstrap_iterations = 100, intervals = None):
+    if not intervals:
+        intervals = make_intervals()        
+
+    laws_by_decade = defaultdict(list)
     for law, year, words in data:
-        decade = (int(year) // 10) * 10
-        decade_counts[decade] = decade_counts.get(decade, 0) + len(words)
-    return decade_counts
+        year = int(year)
+        for interval in intervals:
+            if year in interval:
+                laws_by_decade[f'{interval[0]}-{interval[-1]}'].append((law, year, words))
+    
+    bootstrap_results = defaultdict(pd.DataFrame)
+    for iter in tqdm.tqdm(range(bootstrap_iterations)):
+        selected_laws = []
+        random.seed(seed + iter)
+        for decade, laws in laws_by_decade.items():
+            selected_laws.extend(random.sample(laws, 50))
+        vectors = defaultdict(pd.DataFrame)
+        for interval in intervals:
+            tfidf_vectors, vocab_index = tfidf(selected_laws, interval=interval)
+            tfidf_vectors = pd.DataFrame(tfidf_vectors, index=vocab_index.keys())
+            vectors[f'{interval[0]}-{interval[-1]}'] = tfidf_vectors
+        
+        preliminary = defaultdict(lambda: defaultdict(float))
+        for decade in vectors:
+            tfidf_vectors = vectors[decade]
+            tfidf_means = tfidf_vectors.mean(axis=1)
+            top_words = tfidf_means.nlargest(300)
+            for word, value in top_words.items():
+                preliminary[decade][word] = value
+        preliminary = pd.DataFrame(preliminary)
+        
+        bootstrap_results[iter] = preliminary
+    
+    common_words = set.intersection(
+        *[set(df.index) for df in bootstrap_results.values()]
+    )
+    
+    results = []
+    for word in common_words:
+        if len(word) > 1:
+            for decade in laws_by_decade.keys():
+                values = [df.loc[word, decade] for df in bootstrap_results.values()]
+                mean_value = pd.Series(values).mean()
+                results.append({"word": word, "decade": decade, "value": mean_value})
+
+    final_df = pd.DataFrame(results).pivot(index="word", columns=["decade"], values="value")    
+    
+    return final_df
+
+def words_intervals(data, intervals = None):
+    if not intervals:
+        intervals = make_intervals() 
+    words_by_interval = defaultdict(list)
+    for interval in intervals:
+        start_year = interval[0]
+        end_year = interval[-1]
+        for element in data:
+            _, year, words = element 
+            year = int(year)
+            if start_year <= year <= end_year:
+                words_by_interval[f"{start_year}_{end_year}"].append(words)
+    
+    return words_by_interval
+
 
 # This function searches for the words that are common to the vocabulary of two Word2Vec models, and later returns those that are "most common", according to the wordfreq module.
 # We do this in order to later project one model into another.
