@@ -96,43 +96,28 @@ def random_tfidf(data, seed, bootstrap_iterations = 100, intervals = None):
             if year in interval:
                 laws_by_decade[f'{interval[0]}-{interval[-1]}'].append((law, year, words))
     
-    bootstrap_results = defaultdict(pd.DataFrame)
+    tfidf_results_list = []
+    words = defaultdict(set)
     for iter in tqdm.tqdm(range(bootstrap_iterations)):
         selected_laws = []
         random.seed(seed + iter)
         for decade, laws in laws_by_decade.items():
             selected_laws.extend(random.sample(laws, 50))
-        vectors = defaultdict(pd.DataFrame)
         for interval in intervals:
             tfidf_vectors, vocab_index = tfidf(selected_laws, interval=interval)
-            tfidf_vectors = pd.DataFrame(tfidf_vectors, index=vocab_index.keys())
-            vectors[f'{interval[0]}-{interval[-1]}'] = tfidf_vectors
-        
-        preliminary = defaultdict(lambda: defaultdict(float))
-        for decade in vectors:
-            tfidf_vectors = vectors[decade]
-            tfidf_means = tfidf_vectors.mean(axis=1)
-            top_words = tfidf_means.nlargest(300)
-            for word, value in top_words.items():
-                preliminary[decade][word] = value
-        preliminary = pd.DataFrame(preliminary)
-        
-        bootstrap_results[iter] = preliminary
-    
-    common_words = set.intersection(
-        *[set(df.index) for df in bootstrap_results.values()]
-    )
-    
-    results = []
-    for word in common_words:
-        if len(word) > 1:
-            for decade in laws_by_decade.keys():
-                values = [df.loc[word, decade] for df in bootstrap_results.values()]
-                mean_value = pd.Series(values).mean()
-                results.append({"word": word, "decade": decade, "value": mean_value})
-
-    final_df = pd.DataFrame(results).pivot(index="word", columns=["decade"], values="value")    
-    
+            tfidf_vectors = pd.DataFrame(tfidf_vectors, index=vocab_index.keys()).T
+            tfidf_vectors = tfidf_vectors.loc[:, [col for col in tfidf_vectors.columns if len(col) > 4]]
+            words[iter].update(tfidf_vectors.columns)
+            tfidf_results_list.append(tfidf_vectors)
+            
+    all_words_intersection = set.intersection(*words.values()) if words else set()
+    filtered_tfidf_results = []
+    for df in tfidf_results_list:
+        filtered_df = df.loc[:, [col for col in df.columns if col in all_words_intersection]]
+        filtered_tfidf_results.append(filtered_df)
+            
+    final_df = pd.concat(filtered_tfidf_results, ignore_index=False)
+    final_df = final_df.reset_index()
     return final_df
 
 def words_intervals(data, intervals = None):
