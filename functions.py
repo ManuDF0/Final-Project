@@ -85,7 +85,7 @@ def tfidf(data, interval = None):
 def get_decade(year):
     return (year // 10) * 10
 
-def random_tfidf(data, seed, bootstrap_iterations = 100, intervals = None):
+def random_tfidf(data, seed, n_laws = 50, bootstrap_iterations = 100, intervals = None):
     if not intervals:
         intervals = make_intervals()        
 
@@ -102,7 +102,7 @@ def random_tfidf(data, seed, bootstrap_iterations = 100, intervals = None):
         selected_laws = []
         random.seed(seed + iter)
         for decade, laws in laws_by_decade.items():
-            selected_laws.extend(random.sample(laws, 50))
+            selected_laws.extend(random.sample(laws, n_laws))
         for interval in intervals:
             tfidf_vectors, vocab_index = tfidf(selected_laws, interval=interval)
             tfidf_vectors = pd.DataFrame(tfidf_vectors, index=vocab_index.keys()).T
@@ -146,9 +146,37 @@ def get_mapping(model_1, model_2):
     mapping = list(vocab_1 & vocab_2)
     return [word for word in mapping if word in top_n_list('es', 500) and len(word) > 1]
 
+
+def projected_vector(model_1, model_2, word):
+    R = projection(model_1 = model_1, model_2 = model_2)
+    if word in model_1.wv:
+        v = model_1.wv.get_vector(word)
+        f = np.dot(v, R)
+    
+    return f
+
+def laws_by_decade(data, intervals = None):
+    '''
+    This function groups the laws by whatever interval is given as input.
+    '''    
+    if intervals is None:
+        intervals = make_intervals()
+        
+    laws_by_decade = defaultdict(list)
+    for law, year, words in data:
+        year = int(year)
+        for interval in intervals:
+            if year in interval:
+                laws_by_decade[f'{interval[0]}-{interval[-1]}'].append((law, year, words))
+    return laws_by_decade
+
 # These function takes two models, and a list of words, projects one space into the other and for each of the words given, find the most similar words across projections. 
 # Also measures the semantic drift for these words across time
+
 def projection(model_1, model_2):
+    '''
+    This function calculates the projection matrix between two models.
+    '''
     mapping = get_mapping(model_1=model_1, model_2=model_2)
     A, B = [], []
     
@@ -162,64 +190,29 @@ def projection(model_1, model_2):
     U, S, Vt = np.linalg.svd(BtA)
     R = np.dot(U, Vt)
     return R
- 
-def similar_words_df(model_1, model_2, words):
+
+def similar_words_projection(model_1, model_2, word):
+    ''' 
+    This function takes a word vector from model_1 and projects it into the space of model_2, then finds the
+    most similar words to the projected vector in model_2.
+    '''
     R = projection(model_1 = model_1, model_2 = model_2)
-    proj = []
-    drift_data = []
-    for word in words:
-        if word in model_1.wv:
-            v = model_1.wv.get_vector(word)
-            f = np.dot(v, R)
-            similar_words = model_2.wv.similar_by_vector(f, topn=10)
-
-            for similar_word, score in similar_words:
-                proj.append({
-                    "word": word,
-                    "similar_word": similar_word,
-                    "score": score
-                })
-            
-            drift_distance = 1 - cosine(v, f)
-            drift_data.append({
-                "word": word,
-                "semantic_drift": drift_distance
-            })
+    v = model_1.wv.get_vector(word)
+    f = np.dot(v, R)
+    similar_words = model_2.wv.similar_by_vector(f, topn=100)
     
-    return proj, drift_data
+    return similar_words
 
-def projected_vector(model_1, model_2, word):
+def distance_to_projection(model_1, model_2, word):
+    ''' 
+    This function calculates the cosine distance between the original word vector from model_1 and the projected word vector in the space of model_2.
+    '''
     R = projection(model_1 = model_1, model_2 = model_2)
-    if word in model_1.wv:
-        v = model_1.wv.get_vector(word)
-        f = np.dot(v, R)
-    
-    return f
-
-def semantic_drift_time(data, nombre):
-	plt.figure(figsize=(12, 6))
-	sns.lineplot(
-		data= data,
-		x="target_model",
-		y="semantic_drift",
-		hue="word",
-		marker="o"
-	)
-
-	plt.xlabel("Interval", fontsize=12)
-	plt.ylabel("Cosine Distance", fontsize=12)
-	plt.xticks(rotation=45)
-	plt.legend(bbox_to_anchor=(1.05, 1), loc='upper left')
-	plt.tight_layout()
-
-	plt.savefig(f'./output/semantic_drift_{nombre}.png')
-	plt.show()
- 
-def get_interval(year, intervals):
-    for label, years in intervals.items():
-        if int(year) in years:
-            return label
-    return 'Unknown'
+    v = model_1.wv.get_vector(word)
+    f = np.dot(v, R)
+    v2 = model_2.wv.get_vector(word)
+    distance = 1 - cosine(f, v2)
+    return [word, distance]
 
 def make_intervals():
     all_years = list(range(1890, 2025))
@@ -235,12 +228,8 @@ def make_intervals():
         intervals.append(interval)
     return intervals
 
-def extract_years(model_name):
-    match = re.search(r'model_(\d{4})_(\d{4})', model_name)
-    if match:
-        return f"{match.group(1)}-{match.group(2)}"
-    return model_name  
-
-def get_period_from_model(model_name, intervals):
-    period_name = model_name.replace('model_', '')
-    return period_name
+def get_interval(year, intervals):
+    for label, years in intervals.items():
+        if int(year) in years:
+            return label
+    return 'Unknown'
