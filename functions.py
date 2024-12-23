@@ -191,7 +191,7 @@ def projection(model_1, model_2):
     R = np.dot(U, Vt)
     return R
 
-def similar_words_projection(model_1, model_2, word):
+def similar_words_projection(model_1, model_2, word, n_words):
     ''' 
     This function takes a word vector from model_1 and projects it into the space of model_2, then finds the
     most similar words to the projected vector in model_2.
@@ -199,7 +199,7 @@ def similar_words_projection(model_1, model_2, word):
     R = projection(model_1 = model_1, model_2 = model_2)
     v = model_1.wv.get_vector(word)
     f = np.dot(v, R)
-    similar_words = model_2.wv.similar_by_vector(f, topn=100)
+    similar_words = model_2.wv.similar_by_vector(f, topn= n_words)
     
     return similar_words
 
